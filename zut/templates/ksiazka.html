@@ -1,13 +1,33 @@
-<ion-view title="ksiazka" id="page10">
+<ion-view id="page10">
   <ion-content padding="true" class="has-header">
-    <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
-      <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
+    <div style="margin: 0px; background-color: rgb(232, 235, 239); text-align: center;">
+      <img ng-src="http://zsgwiazowna.pl/wp-content/uploads/2016/09/ksi%C4%85%C5%BCki.gif" height="250" width="250">
+      <!-- <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i> -->
     </div>
-    <h1 id="ksiazka-heading1" style="color:#000000;">Heading</h1>
-    <div id="ksiazka-markdown3" class="show-list-numbers-and-dots">
-      <p style="color:#000000;">Some friendly
-        <strong>markdown</strong>
-      </p>
-    </div>
+        <h1><b>{{respp.data.title}}</b></h1>
+        <hr>
+        <h3 ng-repeat="j in respp.data.authors" >
+        {{j + ' '}}
+
+      </h3>
+      <div>
+        {{respp.data.description}}
+      </div>
+      <div>
+        {{respp.data.genre}}
+      </div>
+      <div>
+        {{respp.data.isbn}}
+      </div>
+      <div>
+        {{'Cena: ' +respp.data.price + 'zł'}}
+      </div>
+      <h4 style="color:green;" ng-if="respp.data.active">
+        Ksiązka jest dostępna
+      </h4>
+      <h4 style="color:red;" ng-if="!respp.data.active">
+        Ksiązka jest dostępna
+      </h4>
+
   </ion-content>
 </ion-view>
