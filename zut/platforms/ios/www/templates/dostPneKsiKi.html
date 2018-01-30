@@ -1,0 +1,23 @@
+<ion-view title="Dostępne książki" id="page7">
+    <ion-header>
+      <ion-content  padding="true" class="has-header">
+        <label class="item item-input" id="dostPneKsiKi-search1">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" ng-model="book"></input>
+        </label>
+      </ion-content>
+  </ion-header>
+  <ion-content padding="true" class = "book-list">
+    <h1>{{user.model.userName}}</h1>
+
+    <ion-list id="dostPneKsiKi-list4">
+      <div ng-controller="dostPneKsiKiCtrl"  ng-repeat="i in respp.data | filter : searcher">
+          <ion-item class="item-thumbnail-left" id="dostPneKsiKi-list-item2" ui-sref="tabsController.ksiazka({bookId:i.id})">
+            <h2> Tytuł: {{i.title}}</h2>
+            <h3 ng-repeat="j in i.authors"> Autor: {{j +' '}}</h3>
+            <h3>Cena: {{i.price}}</h3>
+        </ion-item>
+        </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

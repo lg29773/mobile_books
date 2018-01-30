@@ -1,0 +1,52 @@
+{
+  "name": "mobile_books",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/zut/auth/register",
+      "proxyUrl": "http://grumat.pl/zut/auth/register"
+    },
+    {
+      "path": "/zut/auth/login",
+      "proxyUrl": "http://grumat.pl/zut/auth/login"
+    },
+    {
+      "path": "/zut/api/v1/book",
+      "proxyUrl": "http://grumat.pl/zut/api/v1/book"
+    },
+
+    {
+      "path": "/zut/api/v1/book/*",
+      "proxyUrl": "http://grumat.pl/zut/api/v1/book/*"
+    },
+
+    {
+      "path": "/zut/user/info",
+      "proxyUrl": "http://grumat.pl/zut/user/info"
+    },
+    {
+      "path": "/zut/api/v1/buy/book/*",
+      "proxyUrl": "http://grumat.pl/zut/api/v1/buy/book/*"
+    },
+    {
+      "path": "/zut/api/v1/user/transaction/*",
+      "proxyUrl": "http://grumat.pl/zut/api/v1/user/transaction/*"
+    },
+    {
+      "path": "/zut/api/v1/user/transaction",
+      "proxyUrl": "http://grumat.pl/zut/api/v1/user/transaction"
+    }
+
+  ],
+  "type": "ionic1",
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  },
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

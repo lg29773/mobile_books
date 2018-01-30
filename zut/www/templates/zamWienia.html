@@ -1,0 +1,11 @@
+<ion-view title="Zamówienia" id="page8" ng-init="vm.init()">
+  <ion-content padding="true" class="has-header">
+
+    <div ng-repeat="transaction in vm.transactions">
+      {{transaction}}
+
+      <button ng-click="vm.showTransactionDetails(transaction.id)">Pokaż szczegóły</button>
+    </div>
+
+  </ion-content>
+</ion-view>
